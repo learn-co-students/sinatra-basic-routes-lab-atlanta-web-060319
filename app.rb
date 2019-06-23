@@ -5,6 +5,11 @@ class App < Sinatra::Base
 	hometown = "Auburn"
 	favoritesong = "In My Head"
 
+	info = {
+		info: "someinfo",
+		wut: "huh?"
+	}
+
 
 	get '/name' do
   		"My name is #{myname}"
@@ -16,5 +21,9 @@ class App < Sinatra::Base
 
 	get '/favorite-song' do
 		"My favorite song is #{favoritesong}"
+	end
+
+	get '/info' do
+		"info is #{info[:info]}. wut is #{info[:wut]}"
 	end
 end
